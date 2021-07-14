@@ -1,18 +1,19 @@
 import React from 'react';
+import Greeting from './components/Greeting';
+import Bold from './components/Bold';
+import ChangeColor from './components/ChangeColor';
 
-export default class App extends React.Component {
-    dummy = () => {
-        // Just to test arrow functions
-    }
+const App = () => { // arrow function
 
-    render() {
-        return (
-            <div className={'hello'}>
-                <h2>Hello Electrate</h2>
-                <img src="./assets/logo.png" />
-                <h4>A basic Electron + React.js template</h4>
-                <h4>Have Fun!</h4>
-            </div>
-        );
-    }
+    return (
+        <>
+            <Greeting name="Robinson" />
+            <Greeting name="Queiroz" />
+            <Greeting name="Machado" />
+            Alguma informação em <Bold>negrito</Bold>
+            <ChangeColor />
+        </>
+    )
 }
+
+export default App;
